@@ -110,6 +110,11 @@ npm install --save node-red-contrib-aws-sdk-anything
 
 Node-RED
 
+## Confirmed List
+
+1. DynamoDB
+    1. putItem
+
 ## Logs
 
 |Date|Comments|Version|
