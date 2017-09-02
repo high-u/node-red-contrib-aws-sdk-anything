@@ -4,11 +4,13 @@
 
 * Various services of `aws sdk` can be used.
 
-## Usage
+## Install
 
 ```bash
 npm install --save node-red-contrib-aws-sdk-anything
 ```
+
+## Usage
 
 * Node Settings
   * AWS = IAM AccessKey
