@@ -12,6 +12,8 @@ npm install --save node-red-contrib-aws-sdk-anything
 
 ## Usage
 
+![Node Settings](./screenshots/node-settings.png)
+
 * Node Settings
   * AWS = IAM AccessKey
   * Service = DyanamoDB, ...
@@ -25,6 +27,8 @@ npm install --save node-red-contrib-aws-sdk-anything
 ![Node](./screenshots/node.png)
 
 ## Example Flow
+
+![Flow](./screenshots/example-flow-01.png)
 
 ```json
 [
