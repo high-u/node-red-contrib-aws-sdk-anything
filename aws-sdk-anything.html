@@ -1,35 +1,57 @@
 <script type="text/x-red" data-template-name="aws-sdk-anything">
     <div class="form-row">
-        <label for="node-input-aws"><i class="fa fa-user"></i> AWS</label>
+        <label for="node-input-aws"><i class="fa fa-user"></i>AWS</label>
         <input type="text" id="node-input-aws">
     </div>
     <div class="form-row input-bucket-row">
-        <label for="node-input-servicename"><i class="fa icon-tasks"></i> Service</label>
+        <label for="node-input-servicename"><i class="fa icon-tasks"></i>Service</label>
         <input type="text" id="node-input-servicename" >
         </input>
     </div>
     <div class="form-row input-bucket-row">
-        <label for="node-input-methodname"><i class="fa icon-filter"></i> Method</label>
+        <label for="node-input-methodname"><i class="fa icon-filter"></i>Method</label>
         <input type="text" id="node-input-methodname" >
         </input>
     </div>
     <div class="form-row">
-        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <label for="node-input-name"><i class="fa fa-tag"></i>Name</label>
         <input type="text" id="node-input-name" placeholder="Name">
     </div>
 </script>
 
 <script type="text/x-red" data-help-name="aws-sdk-anything">
-<dl>
-    <dt>Usage</dt>
-    <dd>x</dd>
+<dl class="message-properties">
+    <dt>request</dt>
+    <dd>
+        <ul>
+            <li>
+                <code>payload</code> - "params" of aws sdk examples.
+            </li>
+        </ul>
+    </dd>
+</dl>
+<dl class="message-properties">
+    <dt>response</dt>
+    <dd>
+        <ul>
+            <li>
+                <code>payload</code> - "data" of aws sdk examples.
+            </li>
+            <li>
+                <code>err</code> - "err" of aws sdk examples.
+            </li>
+            <li>
+                <code>params</code> - "params" of aws sdk examples.
+            </li>
+        </ul>
+    </dd>
 </dl>
 </script>
 
 <script type="text/javascript">
     RED.nodes.registerType('aws-sdk-anything',{
         category: 'AWS',
-        color:"#FF9A00",
+        color: "#FF9A00",
         defaults: {
             aws: {type:"aws-sdk-anything-config",required:true},
             region: { value: '' },
@@ -43,8 +65,6 @@
         align: "left",
         label: function() {
             return this.name || "aws "+ this.servicename + " " + this.methodname;
-        },
-        oneditprepare: function () {
         }
    });
 </script>

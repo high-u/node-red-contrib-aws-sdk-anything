@@ -4,6 +4,14 @@
 
 * Various services of `aws sdk` can be used.
 
+## Released
+
+|Date|Version|Description|
+|:--:|:--:|:--|
+|2017-09-25|0.1.0|Return `msg.err` and `msg.params` .|
+|2017-09-02|0.0.1|Released|
+
+
 ## Install
 
 ```bash
@@ -115,8 +123,3 @@ Node-RED
 1. DynamoDB
     1. putItem
 
-## Logs
-
-|Date|Comments|Version|
-|:--:|:-------|:-----:|
-|2017-09-02|first commit|v0.0.1|
