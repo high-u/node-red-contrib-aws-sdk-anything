@@ -47,10 +47,8 @@ module.exports = function(RED) {
             }
           }
           if (this.operation) {
-            console.log("operation ❗");
             targetService[node.method](this.operation, msg.payload, callback);
           } else {
-            console.log("none operation 👍");
             targetService[node.method](msg.payload, callback);
           }
       });
