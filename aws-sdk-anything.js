@@ -12,7 +12,8 @@ module.exports = function(RED) {
         this.accessKey = this.awsConfig.accessKey;
         this.secretKey = this.awsConfig.secretKey;
         this.service = n.servicename;
-        this.method = n.methodname;      
+        this.method = n.methodname;
+        this.operation = n.operation;
       
         var node = this;
         
@@ -28,7 +29,8 @@ module.exports = function(RED) {
 
         node.on("input", function (msg) {
           node.status({ fill: "blue", shape: "dot", text: "Processing..." });
-          targetService[node.method](msg.payload, function (err, data) {
+          
+          var callback = function (err, data) {
             if (err) {
               node.status({ fill: "red", shape: "dot", text: "error" });
               node.error("failed: " + err.toString(), msg);
@@ -43,7 +45,12 @@ module.exports = function(RED) {
               msg.payload = data;
               node.send(msg);
             }
-          });
+          }
+          if (this.operation) {
+            targetService[node.method](this.operation, msg.payload, callback);
+          } else {
+            targetService[node.method](msg.payload, callback);
+          }
       });
     }
     RED.nodes.registerType("aws-sdk-anything", AWSSDKAnything);
