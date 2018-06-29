@@ -8,6 +8,7 @@
 
 |Date|Version|Description|
 |:--:|:--:|:--|
+|2018-07-03|0.3.0|xxx|
 |2018-05-15|0.2.1|supported S3.getSignedUrl|
 |2017-09-25|0.1.0|Return `msg.err` and `msg.params` .|
 |2017-09-02|0.0.1|Released|
